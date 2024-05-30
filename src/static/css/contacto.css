@@ -1,10 +1,82 @@
-.imagen-fondo-contacto{
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    width: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    position: relative;
+    width: 100%;
     height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagen-fondo-contacto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     opacity: 0.5;
+    z-index: -1;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.php-email-form .loading,
+.php-email-form .error-message,
+.php-email-form .sent-message {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.php-email-form .loading {
+    color: #fff;
+    background: #f7c600;
+}
+
+.php-email-form .error-message {
+    color: #fff;
+    background: #f44336;
+}
+
+.php-email-form .sent-message {
+    color: #fff;
+    background: #4caf50;
+}
+
+button {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
 }
