@@ -1,0 +1,15 @@
+@font-face{
+    font-family: personal;
+    src: url("./Fuente/Demo_Fonts/Fontspring-DEMO-allroundgothic-text.otf");
+}
+
+.navbar {
+    background-color: #1B1D84 !important;
+    font-family: personal;
+}
+
+.nav-link{
+    color: #FFFEFF !important;
+    font-size: 1.2em;
+}
+

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block customCSS %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contacto.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<div>
+
+    <img class="imagen-fondo-contacto" src="static/img/datacenter.jpg" alt="Datacenter">
+
+    <div class="col-lg-5 col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+        <div class="form">
+            <form action="contactform/contactform.php" method="post" class="php-email-form" role="form">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control input-text" id="name" placeholder="Nombre y Apellido" required="">
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="email" class="form-control input-text" name="email" id="email" placeholder="E-mail" required="">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-text" name="phone" id="phone" placeholder="Teléfono" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-text" name="company" id="company" placeholder="Empresa" required="">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-text" name="preferred_contact_time" id="preferred_contact_time" placeholder="Horario de disponibilidad" required="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control input-text" name="message" rows="5" placeholder="Mensaje" required=""></textarea>
+                </div>
+                <div class="my-3">
+                    <div class="loading">Enviando</div>
+                    <div class="error-message">Error</div>
+                    <div class="sent-message">Su mensaje ha sido enviado. Muchas Gracias!</div>
+                </div>
+                <div class="text-center pb-5"><button type="submit">Enviar</button></div>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
