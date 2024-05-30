@@ -11,7 +11,7 @@
     
     <div class="form-container col-lg-5 col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
         <div class="form">
-            <form action="contactform/contactform.php" method="post" class="php-email-form" role="form">
+            <form action="{{ url_for('contacto') }}" method="post" class="php-email-form" role="form">
                 <div class="form-group">
                     <input type="text" name="name" class="form-control input-text" id="name" placeholder="Nombre y Apellido" required="">
                 </div>
@@ -28,7 +28,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="form-control input-text" name="company" id="company" placeholder="Empresa" required="">
+                            <input type="text" class="form-control input-text" name="company" id="company" placeholder="Empresa">
                         </div>
                         <div class="col-md-6">
                             <select class="form-control input-text" name="preferred_contact_time" id="preferred_contact_time" required="">
