@@ -8,8 +8,8 @@ app.config['MAIL_SERVER'] = 'smtp-mail.outlook.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'infranetworks@hotmail.com'  
-app.config['MAIL_PASSWORD'] = 'i438-1Vk'
-app.config['SECRET_KEY'] = 'Vk3zunek7CB7'
+app.config['MAIL_PASSWORD'] = ''
+app.config['SECRET_KEY'] = ''
 
 mail = Mail(app)
 
