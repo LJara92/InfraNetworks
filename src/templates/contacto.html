@@ -46,9 +46,15 @@
                     <textarea class="form-control input-text" name="message" rows="5" placeholder="Mensaje" required=""></textarea>
                 </div>
                 <div class="my-3">
-                    <div class="loading">Enviando</div>
-                    <div class="error-message">Error</div>
-                    <div class="sent-message">Su mensaje ha sido enviado. ¡Muchas gracias!</div>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-primary alert-dismissible" role="alert-{{ category }}">
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
                 <div class="text-center pb-5"><button type="submit">Enviar</button></div>
             </form>

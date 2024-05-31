@@ -8,8 +8,8 @@ app.config['MAIL_SERVER'] = 'smtp-mail.outlook.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'infranetworks@hotmail.com'  
-app.config['MAIL_PASSWORD'] = '' #Clave mail
-app.config['SECRET_KEY'] = '' #Secret Key
+app.config['MAIL_PASSWORD'] = 'i438-1Vk'
+app.config['SECRET_KEY'] = 'Vk3zunek7CB7'
 
 mail = Mail(app)
 
@@ -46,8 +46,12 @@ def contacto():
         Horario de disponibilidad: {preferred_contact_time}
         Mensaje: {message}
         """
-        mail.send(msg)
-        flash('Su mensaje ha sido enviado. ¡Muchas gracias!')
+        try:
+            mail.send(msg)
+            flash('Su mensaje ha sido enviado. ¡Muchas gracias!')
+        except Exception as e:
+            flash('Error, mensaje no enviado')
+    
         return redirect(url_for('contacto'))
     
     return render_template('contacto.html')
